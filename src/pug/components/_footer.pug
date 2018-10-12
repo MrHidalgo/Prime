@@ -1,0 +1,49 @@
+// FOOTER :: START
+
+footer#footer.footer
+  .footer__top
+    .container-fluid
+      .row
+        +nav('footer', dataObj.navFooter)
+
+    .container
+      .row
+        .footer__wrapper
+          .footer__wrapper-left
+            .address
+              p.address__title!= "Our Office"
+              p.address__text
+                span!= "3821 Long Prairie Road"
+                span!= "Flower Mound, TX 75028"
+              a.address__link(
+                href="tel:(972) 885-9191"
+                title="" class=""
+              )!= "(972) 885-9191"
+
+          .footer__wrapper-middle.footer__map
+            
+          .footer__wrapper-right
+            .social
+              p.social__title!= "Get Social"
+
+              ul.social__list
+                li.social__item
+                  a.social__link(
+                    href="#"
+                    title="" class=""
+                  )
+                    i.icon-png.fb
+                li.social__item
+                  a.social__link(
+                    href="#"
+                    title="" class=""
+                  )
+                    i.icon-png.tw
+
+  .footer__bottom
+    .container
+      .row
+        .copyright
+          p.copyright__text!= "© Copyright 2018 Prime Integrative Dentistry. Website Development by <a href='#'>Omatix</a>  |  <a href='#'>Sitemap</a>"
+
+// FOOTER :: END
