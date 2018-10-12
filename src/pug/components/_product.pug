@@ -1,7 +1,39 @@
 // SECTION :: START
 
 section#product.product
-  .c-grid
-    .product__wrapper
+  .container
+
+    a.product__btn(
+      href="#"
+      title="" class=""
+    )!= "SEE ALL PROCEDURES"
+
+    .product__circle-wrapper
+      a(href="#").product__circle.product__circle-0
+        .product__circle-img
+          img.object-fit.object-fit--coverCenter(
+            srcset="./img/img-circle-0-product.png, ./img/img-circle-0-product@2x.png 2x"
+            alt="" title=""
+           )
+        p!= "Natural Dentistry"
+        span!= "Our dentist specializes in saving teeth and tooth structure with early detection and minimally-invasive, biomimetic dental treatment, only when necessary."
+
+      a(href="#").product__circle.product__circle-1
+        .product__circle-img
+          img.object-fit.object-fit--coverCenter(
+            srcset="./img/img-circle-1-product.png, ./img/img-circle-1-product@2x.png 2x"
+            alt="" title=""
+          )
+        p!= "Preventative Orthodontics"
+        span!= "We consider every part of you; every tooth, every symptom, and concern. Our biological approach to your total wellbeing is going to make you smile beautifully and sustainably."
+
+      a(href="#").product__circle.product__circle-2
+        .product__circle-img
+          img.object-fit.object-fit--coverCenter(
+            srcset="./img/img-circle-2-product.png, ./img/img-circle-2-product@2x.png 2x"
+            alt="" title=""
+          )
+        p!= "Periodontal Therapy"
+        span!= "Prime Integrative Dentistry sets a new standard for dentistry that is completely integrated with each patient's healthcare provider team."
 
 // SECTION :: END
