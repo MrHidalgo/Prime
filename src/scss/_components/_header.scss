@@ -1,5 +1,97 @@
 // HEADER :: START
 
-.header {}
+.header {
+  z-index: 100;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgba($c-black, 0.55);
+  @include transition(background-color);
+
+  &--fixed {
+    background-color: rgba($c-black, 0.95);
+    @include transition(background-color);
+  }
+
+  &__wrapper {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    min-height: 100px;
+    @include respond(max-extra-small) {
+      padding-left: 15px;
+      padding-right: 15px;
+    }
+
+    &-left {
+      width: 220px;
+      @include respond(max-medium) {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+      }
+
+      .hamburger {
+        @include respond(large) {
+          display: none;
+        }
+      }
+    }
+
+    &-right {
+      display: flex;
+      justify-content: flex-end;
+      width: 100%;
+      max-width: calc(100% - 220px);
+      @include respond(max-medium) {
+        z-index: 100;
+        overflow-y: auto;
+        position: fixed;
+        display: block;
+        top: 100px;
+        right: -100%;
+        width: 320px;
+        max-width: 320px;
+        height: calc(100% - 100px);
+        padding: 30px 15px;
+        border-top: 1px solid rgba($c-white, 0.1);
+        background-color: rgba($c-black, 0.95);
+        @include transition(right);
+
+        &.is-open {
+          right: 0;
+          @include transition(right 0.5s);
+        }
+      }
+    }
+  }
+
+  &--nav {
+    @include respond(max-medium) {
+      padding-bottom: 30px;
+    }
+  }
+
+  &--phone {
+    a {
+      white-space: nowrap;
+      margin-left: 28px;
+      color: #fffcf4;
+      font-size: 15px;
+      @include respond(max-large) {
+        margin-left: 15px;
+      }
+      @include respond(max-medium) {
+        margin: 0;
+      }
+
+      i {
+        margin-right: 5px;
+      }
+    }
+  }
+}
 
 // HEADER :: END

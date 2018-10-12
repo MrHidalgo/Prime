@@ -81,11 +81,21 @@
     border-radius: 100%;
     border: 1px solid $c-white;
     background-color: transparent;
-    @include transition(background-color);
+    @include transition(border-color);
 
     &:hover {
-      background-color: rgba(#858380, 0.25);
-      @include transition(background-color);
+      border-color: #858380;
+      @include transition(border-color);
+
+      i {
+        color: #858380;
+        @include transition(color);
+      }
+    }
+
+    i {
+      color: $c-white;
+      @include transition(color);
     }
   }
 }

@@ -12,9 +12,33 @@ mixin nav(classMod, arrData)
   nav.nav(class!= "nav--" + classMod)
     ul.nav__list
       each val, idx in arrData
-        li.nav__item(class!= "nav__item-" + idx)
+        li.nav__item(class!= (classMod === 'header' && idx === 2) ? "nav__item--drop nav__item-" + idx:"nav__item-" + idx)
           a.nav__link(
             href!= arrData[idx].href
             title=""
             class="nav__link-" + idx
-          )!= arrData[idx].name
+          )
+            if(classMod === 'header' && idx === 2)
+              i.fas.fa-sort-down
+              span!= arrData[idx].name
+            else
+              != arrData[idx].name
+
+          if(classMod === 'header' && idx === 2)
+            .nav__dropdown
+              ul.nav__dropdown-list
+                li.nav__dropdown-item
+                  a.nav__dropdown-link(
+                    href="#"
+                    title="" class=""
+                  )!= "Some link 1"
+                li.nav__dropdown-item
+                  a.nav__dropdown-link(
+                    href="#"
+                    title="" class=""
+                  )!= "Some link 2"
+                li.nav__dropdown-item
+                  a.nav__dropdown-link(
+                    href="#"
+                    title="" class=""
+                  )!= "Some link 3"

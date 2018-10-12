@@ -4,5 +4,22 @@ header#header.header
   .container
     .row
       .header__wrapper
+        .header__wrapper-left
+          +logotype('header', '', 'img-logo', 'png')
+
+          +hamburger()
+
+        .header__wrapper-right.header__mobile(mobile-block-js)
+          .header--nav
+            +nav('header', dataObj.navHeader)
+
+          .header--phone
+            a(
+              href="tel:972.885.9191"
+              title="" class=""
+            )
+              i.fas.fa-mobile-alt
+              span!= "972.885.9191"
+
 
 // HEADER :: END

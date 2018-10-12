@@ -18,6 +18,15 @@ $(document).ready((ev) => {
    * CALLBACK
    * =============================================
    */
+  const initDropDownMenu = () => {
+    $(".nav__link > i").on('click', (ev) => {
+      const elem = $(ev.currentTarget),
+        elemParent = elem.closest('li');
+
+      elem.toggleClass("is-active");
+      elemParent.find('.nav__dropdown').slideToggle(300);
+    })
+  };
 
 
 
@@ -29,7 +38,9 @@ $(document).ready((ev) => {
     initWebFontLoader();
     initPreventBehavior();
     // lib
+    initHamburger();
     // callback
+    initDropDownMenu();
   };
   initJquery();
 });
