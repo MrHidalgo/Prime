@@ -10,7 +10,7 @@
   @include transition(background-color);
 
   &--fixed {
-    background-color: rgba($c-black, 0.95);
+    background-color: rgba($c-black, 0.85);
     @include transition(background-color);
   }
 
@@ -57,7 +57,7 @@
         height: calc(100% - 100px);
         padding: 30px 15px;
         border-top: 1px solid rgba($c-white, 0.1);
-        background-color: rgba($c-black, 0.95);
+        background-color: rgba($c-black, 0.85);
         @include transition(right);
 
         &.is-open {

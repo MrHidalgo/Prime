@@ -2,4 +2,94 @@
   width: 100%;
   max-width: 500px;
   height: 300px;
+
+  &--main {
+    max-width: 100%;
+    min-height: 1065px;
+    @include respond(max-extra-large) {
+      min-height: 965px;
+    }
+    @include respond(max-large) {
+      min-height: 865px;
+    }
+    @include respond(max-medium) {
+      min-height: 765px;
+    }
+    @include respond(max-extra-small) {
+      min-height: 656px;
+    }
+
+    .swiper-wrapper {
+      width: 100%;
+    }
+
+    .swiper-slide {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+
+      p {
+        color: #f2d9c4;
+        text-transform: uppercase;
+        line-height: 1;
+        letter-spacing: 2px;
+        font-size: 22px;
+        @include respond(max-small) {
+          font-size: 18px;
+        }
+      }
+
+      h1 {
+        padding-bottom: 34px;
+        color: #fffcf4;
+        text-transform: uppercase;
+        line-height: 1;
+        font-size: 60px;
+        font-weight: normal;
+        font-family: 'Playfair Display', serif;
+        @include respond(max-small) {
+          font-size: 45px;
+        }
+      }
+
+      span {
+        display: block;
+        padding-bottom: 55px;
+        color: #fffcf4;
+        font-size: 22px;
+        @include respond(max-small) {
+          font-size: 18px;
+
+          br {
+            display: none;
+          }
+        }
+      }
+
+      a {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        max-width: 142px;
+        height: 56px;
+        border-radius: 2em;
+        border: 1px solid transparent;
+        background-color: #ae815c;
+        color: #fffcf4;
+        text-transform: uppercase;
+        @include transition(color, border-color, background-color);
+
+        &:hover {
+          color: #fffcf4;
+          border-color: #1c1b1a;
+          background-color: rgba(#1c1b1a, 1);
+          @include transition(color, border-color, background-color);
+        }
+      }
+    }
+  }
 }

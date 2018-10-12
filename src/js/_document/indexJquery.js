@@ -39,6 +39,7 @@ $(document).ready((ev) => {
     initPreventBehavior();
     // lib
     initHamburger();
+    initSwiper();
     // callback
     initDropDownMenu();
   };
