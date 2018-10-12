@@ -3,7 +3,10 @@
 
 mixin swiperMainContent()
   each val, idx in [0,1,2]
-    .swiper-slide(style="background-image:url('./img/img-bg-main" + ((idx === 1)?"-0":"") + "@2x.png');")
+    .swiper-slide(
+      class!= "swiper-slide-" + idx
+      style="background-image:url('./img/img-bg-main" + ((idx === 1)?"-0":"") + "@2x.png');"
+    )
       .container
         p!= "Holistic"
         h1!= "Dental Care"
