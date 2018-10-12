@@ -5,19 +5,8 @@
 
   &--main {
     max-width: 100%;
-    min-height: 1065px;
-    @include respond(max-extra-large) {
-      min-height: 965px;
-    }
-    @include respond(max-large) {
-      min-height: 865px;
-    }
-    @include respond(max-medium) {
-      min-height: 765px;
-    }
-    @include respond(max-extra-small) {
-      min-height: 656px;
-    }
+    min-height: 656px;
+    height: 100vh;
 
     .swiper-wrapper {
       width: 100%;
@@ -28,7 +17,7 @@
       align-items: center;
       justify-content: center;
       background-repeat: no-repeat;
-      background-position: center;
+      background-position: center top;
       background-size: cover;
 
       p {
