@@ -19,7 +19,7 @@
 /// SHARED
 /// ===============
 @import "_shared/fonts";
-@import "_shared/grid";
+//@import "_shared/grid";
 @import "_shared/main-reset";
 @import "_shared/common";
 //@import "_shared/viewPortChecker";
@@ -39,4 +39,5 @@
 @import "_components/header";
 @import "_components/footer";
 
+@import "_components/testimonials";
 @import "_components/blog";
