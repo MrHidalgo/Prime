@@ -1,0 +1,43 @@
+// BLOG :: START
+
+section#blog.blog
+  .container
+    h1.blog__title.title!= "From the Blog"
+    p.blog__subtitle!= "get the latest news"
+
+    .blog__block-wrapper
+      .blog__block.blog__block-0
+        .blog__block-img
+          img.object-fit.object-fit--coverCenter(
+            srcset="./img/img-block-0-blog.jpg, ./img/img-block-0-blog@2x.jpg 2x"
+            alt="" title=""
+           )
+
+        p.blog__block-date!= "September 18th 2018"
+        p.blog__block-title!= "How your diet can prevent gum disease"
+        p.blog__block-text!= "Gum disease causes your gums to become chronically infected, creating bacteria and inflammation that can spread to other areas—particularly the heart. In fact, several types of bacteria that cause gum disease have also been found in the plaque that accumulates in the heart, according to findings from a study published in the American Journal of Preventive Medicine."
+        .blog__block-link
+          a(
+            href="#"
+            title="" class=""
+          )!= "Read more"
+
+      .blog__block.blog__block-1
+        .blog__block-img
+          img.object-fit.object-fit--coverCenter(
+            srcset="./img/img-block-1-blog.jpg, ./img/img-block-1-blog@2x.jpg 2x"
+            alt="" title=""
+          )
+
+        p.blog__block-date!= "January 12th 2018"
+        p.blog__block-title!= "Holistic dentist for children"
+        p.blog__block-text!= "All that has life in nature exhibits this quality. Be it the tree with a vast trunk, well spread branches and leaves above and robust root system below, Does the top feed the bottom or the bottom feeds the top? In reality everything has to coexist for harmony to ensue. It is this all encompassing nature of all thing living that constitutes life."
+        .blog__block-link
+          a(
+            href="#"
+            title="" class=""
+          )!= "Read more"
+
+
+
+// BLOG :: END

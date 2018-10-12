@@ -1,0 +1,112 @@
+// BLOG :: START
+
+.blog {
+  padding-top: 143px;
+  padding-bottom: 156px;
+  background-image: url('../img/img-bg-blog@2x.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center 400px;
+  @include respond(max-medium) {
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
+  @include respond(max-small) {
+    padding-top: 71px;
+    padding-bottom: 78px;
+  }
+
+  &__title {
+    padding-bottom: 11px;
+  }
+
+  &__subtitle {
+    padding-bottom: 70px;
+    color: #4c4b4b;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 16px;
+    @include respond(max-small) {
+      padding-bottom: 35px;
+    }
+  }
+
+  &__block {
+    width: calc(50% - 15px);
+    margin-right: 15px;
+    margin-left: 15px;
+    @include respond(max-small) {
+      width: 100%;
+      margin-left: 0;
+      margin-right: 0;
+      margin-bottom: 35px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+
+    &-wrapper {
+      display: flex;
+      justify-content: space-between;
+      @include respond(max-small) {
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+    }
+
+    &-img {
+      overflow: hidden;
+      position: relative;
+      height: 250px;
+      border-radius: 8px;
+      margin-bottom: 20px;
+    }
+
+    &-date {
+      padding-bottom: 32px;
+      color: #939393;
+      text-transform: uppercase;
+    }
+
+    &-title {
+      padding-bottom: 15px;
+      color: #074809;
+      line-height: 1;
+      font-size: 30px;
+    }
+
+    &-text {
+      min-height: 167px;
+      color: #141414;
+      font-size: 16px;
+      padding-bottom: 35px;
+    }
+
+    &-link {
+      a {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        max-width: 142px;
+        height: 56px;
+        border-radius: 2em;
+        border: 1px solid transparent;
+        background-color: #1c1b1a;
+        color: #fffcf4;
+        text-transform: uppercase;
+        @include transition(color, border-color, background-color);
+
+        &:hover {
+          color: #1c1b1a;
+          border-color: #1c1b1a;
+          background-color: rgba(#1c1b1a, 0);
+          @include transition(color, border-color, background-color);
+        }
+      }
+    }
+  }
+}
+
+// BLOG :: END

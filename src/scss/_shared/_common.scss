@@ -1,5 +1,22 @@
 // COMMON :: START
 
+// title
+.title {
+  color: #074809;
+  line-height: 1;
+  text-align: center;
+  font-size: 48px;
+  font-weight: normal;
+  font-family: 'Playfair Display', serif;
+  @include respond(max-large) {
+    font-size: 42px;
+  }
+  @include respond(max-small) {
+    font-size: 38px;
+  }
+}
+// title :: end
+
 // address
 .address {
   &__title {
