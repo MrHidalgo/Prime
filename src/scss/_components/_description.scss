@@ -1,0 +1,37 @@
+// DESCRIPTION :: START
+
+.description {
+  padding-top: 50px;
+  padding-bottom: 75px;
+  @include respond(max-small) {
+    padding-bottom: 55px;
+  }
+
+  h2 {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    color: #074809;
+    line-height: 1;
+    font-size: 22px;
+    font-family: 'Playfair Display', serif;
+
+    &:first-of-type {
+      padding-top: 0;
+    }
+  }
+
+  p {
+    padding-bottom: 15px;
+  }
+
+  ul {
+    padding-left: 25px;
+
+    li {
+      padding-bottom: 15px;
+      list-style: circle;
+    }
+  }
+}
+
+// DESCRIPTION :: END

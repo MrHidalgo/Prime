@@ -1,0 +1,20 @@
+// MAIN :: START
+
+
+mixin swiperMainContent()
+  each val, idx in [0]
+    .swiper-slide(
+      class!= "swiper-slide-" + idx
+      style="background-image:url('./img/img-bg-main" + ((idx === 1)?"-0":"") + "@2x.png');"
+    )
+      .container
+        p!= "Holistic"
+        h1!= "Dental Care"
+        span!= "We have found our Life’s calling in the<br>principles and practice of Biological Dentistry"
+
+
+section#main.main
+  +swiper('swiper-container--banner', 'swiperMainContent', false, false, false)
+
+
+// MAIN :: END

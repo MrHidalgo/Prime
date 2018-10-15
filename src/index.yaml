@@ -3,4 +3,7 @@ ProjectTitle: Prime ID
 PageList:
 - file: index.html
   titleName: Home
+  ready: 100
+- file: banner.html
+  titleName: Banner
   ready: 95
